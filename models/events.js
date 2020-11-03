@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("Event", {
+    var Event = sequelize.define("Event", {
         // Location of event
         location: {
             type: DataTypes.STRING,
@@ -8,6 +8,11 @@ module.exports = function(sequelize, DataTypes) {
         //Date of event
         date: {
             type: DataTypes.DATE,
+            allowNull: false
+        },
+        //User foreign key
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     });
