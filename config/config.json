@@ -1,22 +1,22 @@
 {
   "development": {
     "username": "root",
-    "password": "@BatZinc2020",
-    "database": "passport_demo",
+    "password": "Laparrilla82",
+    "database": "bands_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "@BatZinc2020",
-    "database": "database_test",
+    "password": "Laparrilla82",
+    "database": "bands_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "@BatZinc2020",
-    "database": "database_production",
+    "password": "Laparrilla82",
+    "database": "bands_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
