@@ -19,10 +19,23 @@ module.exports = function(app) {
       password: req.body.password,
       bio: req.body.bio,
       genre: req.body.genre,
-      user_id: req.body.user_id
     })
       .then(function() {
         res.redirect(307, "/api/login");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
+  //Route for creating new event
+  app.post("/api/addevent", function(req, res) {
+    db.Event.create({
+      location: req.body.location,
+      date: req.body.date,
+      user_id: req.body.user_id
+    })
+      .then(function() {
+        res.redirect(307, "/");
       })
       .catch(function(err) {
         res.status(401).json(err);
