@@ -42,6 +42,44 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/events", function(req, res) {
+    db.Event.findAll({}).then(function(dbEvent) {
+      res.json(dbEvent);
+    });
+  });
+
+  app.get("/api/events/:genre", function(req, res) {
+    db.Event.findAll({
+      where: {
+        genre: req.params.genre
+      }
+    }).then(function(dbGenre) {
+      res.json(dbGenre);
+    });
+  });
+
+  app.put("/api/events", function(req, res) {
+    db.Event.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(dbEvent) {
+      res.json(dbEvent);
+    });
+  });
+
+  app.delete("api/events/:id", function(req, res){
+    db.Event.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbEvent){
+      res.json(dbEvent);
+    })
+  })
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
