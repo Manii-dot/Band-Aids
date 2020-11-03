@@ -30,8 +30,8 @@
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="exampleInputUsername1">Username</label>
-            <input type="username" class="form-control" id="username-input" placeholder="Username">
+            <label for="exampleInputUsername1">Band name</label>
+            <input type="bandname" class="form-control" id="bandname-input" placeholder="Band name">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
@@ -40,6 +40,24 @@
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <div class="form-group">
+            <label for="inputGenre">Category</label>
+            <select id="category" class="form-control">
+              <option selected>...</option>
+              <option>Pop</option>
+              <option>Punk</option>
+              <option>Jazz</option>
+              <option>Techno/Electronic</option>
+              <option>Country</option>
+              <option>Rock/Alternative</option>
+              <option>Hip-Hop/Rap</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="body">Bio:</label>
+            <textarea class="form-control" rows="10" id="body"></textarea>
           </div>
           <button type="submit" id="signUpBtn" class="btn btn-default">Sign Up</button>
         </form>
