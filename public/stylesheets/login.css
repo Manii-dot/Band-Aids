@@ -1,0 +1,146 @@
+  
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+body {
+  background-image: url(../img/background_login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin:0 auto;
+  padding: 0px;
+}
+
+.main_body{
+  min-height: 100%;
+}
+
+.signupForm{
+  color: white;
+}
+
+#loginPage{
+  color: yellow;
+}
+
+.nav-item{
+  margin-top: 0.5vw;
+  margin-right:0.5vw;
+  background-color: #000;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#signUpBtn{
+background-color: white;
+color: #000;
+}
+
+#signUpBtn:hover{
+  background-color: blue;
+color: white;
+}
+
+.nav-item:hover{
+  background-color: white;
+  opacity: 0.8;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: #000;
+}
+
+.profile{
+  margin-top: 2vw;
+  background-color: white;
+  border-radius: 10px;
+  color: #000;
+}
+
+.profile-pic{
+  margin: 0 auto;
+  margin-top: 1vw;
+  border-radius: 10px;
+  padding: 5px;
+  height: 10vw;
+  width: 10vw;
+}
+
+.card-title, .mt-0{
+  color: #000;
+  border-bottom: 2px solid #353535;
+}
+
+.label{
+  color: #000;
+}
+
+.loginPic, .mr-3, .media{
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.left-column{
+  margin-right:5px;
+}
+
+#edit-profile{
+  text-align: center;
+  color: white;
+  background-color: #ef233c;
+  border-radius: 10px;
+  margin: 1px;
+}
+
+#edit-profile:hover{
+  background-color: white;
+  opacity: 0.8;
+  color: #000;
+}
+
+.media{
+  background-color: white;
+  color: #000;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.footer{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.card-header{
+  background-color: #DCDCDC;
+}
+
+#author{
+  color:#000;
+}
+
+iframe{
+  padding: 5px;
+  margin-right:10px;
+}
+
+footer {
+    position: fixed;
+    color: white;
+    left: 0;
+    bottom: 0;
+    height: 3%;
+    width: 100%;
+    text-align: center;
+}
