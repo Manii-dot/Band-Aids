@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var eventForm = $("#eventForm");
+    var eventForm = $("#eventform");
     var inputBand = $("inputBand");
     var inputLocation = $("#inputLocation");
     var imageURL = $("#imageURL");
