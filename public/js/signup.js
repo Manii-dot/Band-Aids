@@ -3,15 +3,17 @@ $(document).ready(function() {
     var signUpForm = $("form.signup");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
-    var bioInput = $("");
-    var genreInput = $("");
+    var genreInput = $("#category");
+    var bioInput = $("#body");
 
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
         event.preventDefault();
         var userData = {
             email: emailInput.val().trim(),
-            password: passwordInput.val().trim()
+            password: passwordInput.val().trim(),
+            genre: genreInput.val().trim(),
+            bio: bioInput.val().trim()
         };
 
         if (!userData.email || !userData.password) {
