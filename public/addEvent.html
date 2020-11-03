@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../public/stylesheets/style.css" media="screen" title="no title" charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <title>Submit Event</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand nav-item" href="#">
+        <img src="img/Band-aid Logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/share">Share</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/view">Discover</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputBand">What band is playing?</label>
+              <input type="text" class="form-control" id="inputBand" placeholder="Band" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputLocation">Where is the concert being held?</label>
+              <input type="text" class="form-control" id="inputLocation" placeholder="1234 Main St" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputUser">Submit Image</label>
+              <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" required>
+            </div>
+          </div>
+          <div class="form-row">
+              <a class="btn btn-dark"  href="https://imgur.com/upload" target="_blank" role="button">Imgur</a>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputUser">Description</label>
+              <input type="text" class="form-control" id="caption" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inputGenre">Category</label>
+              <select id="category" class="form-control">
+                <option>Pop</option>
+                <option>Punk</option>
+                <option>Jazz</option>
+                <option>Techno/Electronic</option>
+                <option>Country</option>
+                <option>Rock/Alternative</option>
+                <option>Hip-Hop/Rap</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn btn-success" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">Copyright 2020 © Band-Aid</footer>
+  </div>
+  <script src="../js/index.js"></script>
+</body>
+</html>
