@@ -1,29 +1,37 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Band-Aid</title>
+  <link rel="icon" href="Images\FitFeed_Brand.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="stylesheets\login.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
+
+  <nav class="navbar">
+    <a class="navbar-brand nav-item" href="#">
+      <img src="img/Band-aid Logo.jpg" width="100" height="100" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
+    </a>
   </nav>
+
+  <div class="container-fluid main_body">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="signupForm col-md-6 col-md-offset-3">
         <h2>Sign Up Form</h2>
         <form class="signup">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputUsername1">Username</label>
+            <input type="username" class="form-control" id="username-input" placeholder="Username">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
@@ -33,13 +41,21 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <button type="submit" id="signUpBtn" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <p>Or log in <a id="loginPage" href="login.html">here</a></p>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <img class="loginPic" height="200" width="300" src="img/login_pic_1.jpg"alt="concert in black and white">
+        <img class="loginPic" height="200" width="300" src="img/login_pic_2.jpg" alt="silhouette of a fan">
+        <img class="loginPic" height="200" width="300" src="img/login_pic_3.jpg" alt="red and blue lights shining on a concert stage">
       </div>
     </div>
+    <footer class="footer">Copyright 2020 © Band-Aid</footer>
   </div>
+
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
