@@ -30,9 +30,13 @@ module.exports = function(app) {
   //Route for creating new event
   app.post("/api/addevent", function(req, res) {
     db.Event.create({
-      location: req.body.location,
+      place: req.body.place,
       date: req.body.date,
-      user_id: req.body.user_id
+      user_id: req.body.user_id,
+      band: req.body.band,
+      description: req.body.description,
+      genre: req.body.genre,
+      image: req.body.image
     })
       .then(function() {
         res.redirect(307, "/");
@@ -48,10 +52,20 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/events/user/:user_id", function(req, res) {
+    db.Event.findAll({
+      where: {
+        user_id: req.params.user_id
+      }
+    }).then(function(dbEvent) {
+      res.json(dbEvent);
+    });
+  });
+
   app.get("/api/events/:id", function(req, res) {
     db.Event.findOne({
       where: {
-        id: req.params.id
+        genre: req.params.id
       }
     }).then(function(dbEvent) {
       res.json(dbEvent);
