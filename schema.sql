@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS bands_db;
+CREATE DATABASE bands_db;
+USE bands_db;

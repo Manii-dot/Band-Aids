@@ -6,6 +6,7 @@ $(document).ready(function() {
     var inputDescription = $("#caption");
     var inputDate = $("#date");
     var inputGenre = $("#category");
+    var eventArea = $("event-list");
 
     eventForm.on("submit", function(event) {
         event.preventDefault();
@@ -20,6 +21,13 @@ $(document).ready(function() {
         };
 
         createEvent(eventData);
+    });
+
+
+    $.get("/api/events", function(events) {
+        events.forEach(event => {
+            eventArea.prepend(renderEvent(event));
+        })
     });
 
     function createEvent(data) {
@@ -40,5 +48,23 @@ $(document).ready(function() {
             // Thow error
             if (err) throw err;
         });
+    }
+
+
+    function renderEvent(data) {
+        // Deconstructed values
+        let { band, place, image, description, date, genre } = data;
+
+        // Render html for event
+        return $( /*html*/ `
+            <div class="event">
+                <img href="${image}" alt="Band Image" width="300" height="300">
+                <p>Band: ${band}</p>
+                <p>Location: ${place}</p>
+                <p>Description of Event: ${description}</p>
+                <p>Date: ${date}</p>
+                <p>Genre: ${genre}</p>
+            </div>
+        `);
     }
 });
