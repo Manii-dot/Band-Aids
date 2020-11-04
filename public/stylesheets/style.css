@@ -1,3 +1,14 @@
-nav{
-    background-color: teal;
+main{
+    text-align: center;
+    color: white;
 }
+
+body {
+    background-image: url(../img/login_pic_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin:0 auto;
+    padding: 0px;
+  }

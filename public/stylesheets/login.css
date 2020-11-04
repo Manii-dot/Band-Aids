@@ -29,7 +29,7 @@ body {
 .nav-item{
   margin-top: 0.5vw;
   margin-right:0.5vw;
-  background-color: #000;
+  background-color: white;
   border-radius: 10px;
   font-size: 20px;
 }
@@ -50,11 +50,11 @@ color: white;
 }
 
 a{
-  color: white;
+  color: black;
 }
 
 a:hover{
-  color: #000;
+  color: blue;
 }
 
 .profile{
@@ -110,16 +110,6 @@ a:hover{
   color: #000;
   padding: 12px;
   margin-bottom: 8px;
-}
-
-.footer{
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  margin-top: 35px;
-  margin-bottom: 35px;
 }
 
 .card-header{

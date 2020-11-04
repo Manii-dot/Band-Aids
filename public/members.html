@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Band-Aid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band-Aid | Band Info</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom css file after for overide-->
+    <link rel="stylesheet" href="../public/stylesheets/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="googleFonts">
+    <!-- reset last -->
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
 </head>
 <body>
-  
+    
+  <div class="container">
+    <header class="header_area">
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand nav-item" href="#">
+                <img src="img/Band-aid Logo.jpg" width="100" height="100" class="d-inline-block align-top" alt="" loading="lazy">
+              </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Events<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="addEvent.html">Create Event</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <main>
+        <section class="row" id="bandInfo">
+            <div class="col-sm-8">
+                <h1 id="pageHeader">Band Name</h1>
+                <div class="row" id="Bio">
+                    <div class="col-sm-12">
+                        <img id="selfImg" src="placeholder" alt="Zach Greenberg" width="250px" height="300px">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non recusandae voluptates dolorum autem hic odit dolore voluptatum quia inventore ex, at vitae. Mollitia officiis possimus alias totam fuga sit quod?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">Copyright 2020 © Band-Aid</footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
