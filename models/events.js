@@ -10,10 +10,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        // Date of event
+        // Image of band
         image: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
         // Description of event
         description: {
