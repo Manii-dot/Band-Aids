@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         // Image of band
         image: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: true
         },
         // Description of event
