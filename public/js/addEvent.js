@@ -43,7 +43,7 @@ $(document).ready(function() {
             genre: genre
         }).then(function(data) {
             // Redirect to members.html
-            window.location.replace("members");
+            window.location.replace("/members");
         }).catch(function(err) {
             // Thow error
             if (err) throw err;
