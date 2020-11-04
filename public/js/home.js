@@ -62,7 +62,7 @@ var API = {
       var $posts = data.map(function(post) {
         console.log(post);
         var $a = $("<a>")
-          .text(post.animal_name)
+          .text(post.band)
           .attr("href", "/posts/" + post.id);
   
         var $location = $("<h4>")
