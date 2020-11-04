@@ -15,7 +15,18 @@ $(document).ready(function() {
             description: inputDescription.val().trim(),
             genre: inputGenre.val().trim()
         };
+
+        createEvent(eventData);
     });
 
-    function createEvent()
+    function createEvent(data) {
+        let { band, location, image, description, genre } = data;
+
+        $.post("/api/addevent", {
+            band: band,
+            location: location,
+
+        })
+
+    }
 });

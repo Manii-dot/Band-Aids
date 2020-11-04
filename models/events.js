@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         // Date of event
-        date: {
+        image: {
             type: DataTypes.DATE,
             allowNull: false
         },
@@ -20,10 +20,16 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
+        // State the genre of the band
+        genre: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         // User foreign key
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
     });
+    return Event;
 };
