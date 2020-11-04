@@ -48,6 +48,16 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/events/:id", function(req, res) {
+    db.Event.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbEvent) {
+      res.json(dbEvent);
+    });
+  });
+
   app.get("/api/events/:genre", function(req, res) {
     db.Event.findAll({
       where: {
