@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         // Location of event
-        location: {
+        place: {
             type: DataTypes.STRING,
             allowNull: false
         },
