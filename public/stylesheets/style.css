@@ -30,3 +30,7 @@ footer {
 .navlink {
     color: white;
 }
+
+#event-list {
+    border: white;
+}
