@@ -2,7 +2,6 @@ $(document).ready(function() {
     var eventForm = $("#eventform");
     var inputBand = $("#inputBand");
     var inputLocation = $("#inputLocation");
-    var imageURL = $("#imageUrl");
     var inputDescription = $("#description");
     var inputDate = $("#date");
     var inputGenre = $("#category");
@@ -14,7 +13,6 @@ $(document).ready(function() {
         var eventData = {
             band: inputBand.val().trim(),
             place: inputLocation.val().trim(),
-            image: imageURL.val().trim(),
             description: inputDescription.val().trim(),
             date: inputDate.val().trim(),
             genre: inputGenre.val().trim()
@@ -32,12 +30,11 @@ $(document).ready(function() {
 
     function createEvent(data) {
         // Deconstructed values
-        let { band, place, image, description, date, genre } = data;
+        let { band, place, description, date, genre } = data;
         //Post data through api route
         $.post("/api/addevent", {
             band: band,
             place: place,
-            image: image,
             description: description,
             date: date,
             genre: genre
@@ -53,12 +50,11 @@ $(document).ready(function() {
 
     function renderEvent(data) {
         // Deconstructed values
-        let { band, place, image, description, date, genre } = data;
+        let { band, place, description, date, genre } = data;
 
         // Render html for event
         return $( /*html*/ `
             <div class="event">
-                <img href="${image}" alt="Band Image" width="300" height="300">
                 <p>Band: ${band}</p>
                 <p>Location: ${place}</p>
                 <p>Description of Event: ${description}</p>

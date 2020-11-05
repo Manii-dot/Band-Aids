@@ -10,11 +10,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        // Image of band
-        image: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         // Description of event
         description: {
             type: DataTypes.STRING,
