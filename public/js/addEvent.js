@@ -56,11 +56,11 @@ $(document).ready(function() {
         return $( /*html*/ `
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Band: ${band}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Genre: ${genre}</h6>
-                    <p class="card-text">${description}</p>
-                    <div>Date: ${date}</div>
-                    <div>Location: ${place}</div>
+                  <h5 class="card-title">${band}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">${place}</h6>
+                  <p class="card-text">${description}</p>
+                  <p class="card-text">Date: ${date}</p>
+                  <p class="card-text">Genre: ${genre}</p>
                 </div>
             </div>
             <br>
