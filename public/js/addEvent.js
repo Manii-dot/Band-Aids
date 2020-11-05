@@ -63,6 +63,7 @@ $(document).ready(function() {
                     <div>Location: ${place}</div>
                 </div>
             </div>
+            <br>
         `);
     }
 });
