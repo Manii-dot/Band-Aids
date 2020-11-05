@@ -22,14 +22,16 @@ This application leverages:
 * Boostrap
 * NodeJS
 * Express
-* Npm emailer
+* Node mailer
 * MySQL
 * Sequalize
 * Heroku
-![Screenshot]()
+![Screenshot](public/img/Screen Shot.png)
 
 ## Collaborators
 
-
+* [Zach-Greenberg] (https://github.com/Zach-Greenberg)
+* [Austin-Lambert] (https://github.com/AusLam212)
+* [Mario-Diosdado] (https://github.com/MarioDiosdado)
 * [Emmanuel Stephen](https://github.com/Manii-dot)
 * [Prem Gelivi](https://github.com/geliviprem)
