@@ -54,7 +54,7 @@ $(document).ready(function() {
 
         // Render html for event
         return $( /*html*/ `
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">${band}</h5>
                   <h6 class="card-subtitle mb-2 text-muted">${place}</h6>
