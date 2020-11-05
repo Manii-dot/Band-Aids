@@ -26,12 +26,13 @@ This application leverages:
 * MySQL
 * Sequalize
 * Heroku
-![Screenshot](public/img/Screen Shot.png)
+
+![Screenshot](Screenshot.png)
 
 ## Collaborators
 
-* [Zach-Greenberg] (https://github.com/Zach-Greenberg)
-* [Austin-Lambert] (https://github.com/AusLam212)
-* [Mario-Diosdado] (https://github.com/MarioDiosdado)
+* [Zach-Greenberg](https://github.com/Zach-Greenberg)
+* [Austin-Lambert](https://github.com/AusLam212)
+* [Mario-Diosdado](https://github.com/MarioDiosdado)
 * [Emmanuel Stephen](https://github.com/Manii-dot)
 * [Prem Gelivi](https://github.com/geliviprem)
