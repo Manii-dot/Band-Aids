@@ -29,11 +29,6 @@ module.exports = function(sequelize, DataTypes) {
         genre: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        // User foreign key
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
         }
     });
     return Event;
