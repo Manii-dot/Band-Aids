@@ -1,12 +1,12 @@
 $(document).ready(function() {
     var eventForm = $("#eventform");
-    var inputBand = $("inputBand");
+    var inputBand = $("#inputBand");
     var inputLocation = $("#inputLocation");
     var imageURL = $("#imageURL");
-    var inputDescription = $("#caption");
+    var inputDescription = $("#description");
     var inputDate = $("#date");
     var inputGenre = $("#category");
-    var eventArea = $("event-list");
+    var eventArea = $("#event-list");
 
     eventForm.on("submit", function(event) {
         event.preventDefault();
