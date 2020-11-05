@@ -54,12 +54,14 @@ $(document).ready(function() {
 
         // Render html for event
         return $( /*html*/ `
-            <div class="event">
-                <p>Band: ${band}</p>
-                <p>Location: ${place}</p>
-                <p>Description of Event: ${description}</p>
-                <p>Date: ${date}</p>
-                <p>Genre: ${genre}</p>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Band: ${band}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Genre: ${genre}</h6>
+                    <p class="card-text">${description}</p>
+                    <div>Date: ${date}</div>
+                    <div>Location: ${place}</div>
+                </div>
             </div>
         `);
     }
