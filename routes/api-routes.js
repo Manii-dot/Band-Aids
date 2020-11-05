@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+let nodemailer = require('nodemailer');
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -25,6 +26,34 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+  app.post("/api/mail", function(req, res){
+    console.log(req.body);
+    let transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: "band.aid.nodemailer@gmail.com",
+        pass: "Test#Test2020",
+      },
+    });
+  
+    // send mail with defined transport object
+    let mailOptions = {
+      from: '"Band-Aid Development Team" <band.aid.nodemailer@gmail.com>',
+      to: req.body.email,
+      subject: 'Welcome to Band-Aid!',
+      html: '<h1>Welcome to Band-Aid!</h1><p>We are excited to have a new member share, explore, and discover music events happening around the world!</p>'
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return console.log(error);
+    }
+    console.log(info)
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  });
+  })
   //Route for creating new event
   app.post("/api/addevent", function(req, res) {
     db.Event.create({
