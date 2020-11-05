@@ -32,13 +32,13 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    Event.associate = models => {
-        Event.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    }
+    // Event.associate = models => {
+    //     Event.belongsTo(models.User, {
+    //         foreignKey: {
+    //             allowNull: true
+    //         }
+    //     });
+    // }
 
     return Event;
 };
