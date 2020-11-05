@@ -1,19 +1,9 @@
 let nodemailer = require('nodemailer');
 var db = require("./models");
 
-// cron.schedule('* * * * *', () => {
-//     transporter.sendMail(mailOptions, function(error, info){
-//         if (error) {
-//             console.log(error);
-//         } else {
-//             console.log('Email sent: ' + info.response);
-//         }
-//     });
-// });
-
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-    host: 'gmail',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
