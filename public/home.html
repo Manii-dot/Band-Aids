@@ -10,30 +10,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylesheets/login.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand nav-item" href="#">
-            <img src="img/Band-aid Logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Events<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="addEvent.html">Create Event</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/addEvent">Create Event<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/members">Members<span class="sr-only"></span></a>
+            </li>
+          </ul>
         </div>
     </nav>
 
@@ -68,6 +66,7 @@
 
         </div>
     </div>
+    <footer class="footer">Copyright 2020 © Band-Aid</footer>
     <script src="js/home.js"></script>
     <script src="js/addEvent.js"></script>
 </body>

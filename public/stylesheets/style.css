@@ -11,4 +11,22 @@ body {
     height: 100%;
     margin:0 auto;
     padding: 0px;
-  }
+}
+
+label {
+    color: white;
+}
+
+footer {
+    position: fixed;
+    color: white;
+    left: 0;
+    bottom: 0;
+    height: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+.navlink {
+    color: white;
+}
