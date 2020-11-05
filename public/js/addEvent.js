@@ -61,6 +61,7 @@ $(document).ready(function() {
                   <p class="card-text">${description}</p>
                   <p class="card-text">Date: ${date}</p>
                   <p class="card-text">Genre: ${genre}</p>
+                  <button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
                 </div>
             </div>
             <br>
