@@ -31,5 +31,14 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
+
+    Event.associate = models => {
+        Event.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    }
+
     return Event;
 };
