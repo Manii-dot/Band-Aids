@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
 
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="stylesheets/login.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <title>Submit Event</title>
+<head>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/login.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Submit Event</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand nav-item" href="#">
-        <img src="img/Band-aid Logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand nav-item" href="#">
+            <img src="img/Band-aid Logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="home.html">Events<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addEvent.html">Create Event</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-    </div>
-  </nav>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Events<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addEvent.html">Create Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <br>
+    <br>
 
-  <div class="container ">
-    <div class="row">
-      <div class="col-lg-4">
-        <form id="eventform">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputBand">What band is playing?</label>
-              <input type="text" class="form-control" id="inputBand" placeholder="Band" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputLocation">Where is the concert being held?</label>
-              <input type="text" class="form-control" id="inputLocation" placeholder="1234 Main St" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputUser">Submit Image</label>
-              <input type="text" class="form-control" id="imageUrl" placeholder="Image URL">
-            </div>
-          </div>
-          <div class="form-row">
-              <a class="btn btn-dark"  href="https://imgur.com/upload" target="_blank" role="button">Imgur</a>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputUser">Description</label>
-              <input type="text" class="form-control" id="description" placeholder="" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="start">Start date:</label>
-              <br>
-              <input type="date" id="date" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputGenre">Category</label>
-              <select id="category" class="form-control">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-4">
+                <form id="eventform">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputBand">What band is playing?</label>
+                            <input type="text" class="form-control" id="inputBand" placeholder="Band" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputLocation">Where is the concert being held?</label>
+                            <input type="text" class="form-control" id="inputLocation" placeholder="1234 Main St" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputUser">Submit Image</label>
+                            <input type="text" class="form-control" id="imageUrl" placeholder="Image URL">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <a class="btn btn-dark" href="https://imgur.com/upload" target="_blank" role="button">Imgur</a>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputUser">Description</label>
+                            <input type="text" class="form-control" id="description" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="start">Start date:</label>
+                            <br>
+                            <input type="date" id="date" name="trip-start" value="2018-07-22" min="2020-01-01" max="2050-12-31">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inputGenre">Category</label>
+                            <select id="category" class="form-control">
                 <option selected>choose a genre</option>
                 <option>Pop</option>
                 <option>Punk</option>
@@ -90,17 +90,18 @@
                 <option>Hip-Hop/Rap</option>
                 <option>Other</option>
               </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-success" id="submit">Submit</button>
+                    </div>
+                </form>
             </div>
-          </div>
-          <div class="form-row">
-            <button type="submit" class="btn btn-success" id="submit">Submit</button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <footer class="footer">Copyright 2020 © Band-Aid</footer>
     </div>
-    <footer class="footer">Copyright 2020 © Band-Aid</footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/addEvent.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/addEvent.js"></script>
 </body>
+
 </html>
