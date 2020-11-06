@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var eventForm = $("#eventform");
     var inputBand = $("#inputBand");
     var inputLocation = $("#inputLocation");
@@ -6,8 +6,16 @@ $(document).ready(function() {
     var inputDate = $("#date");
     var inputGenre = $("#category");
     var eventArea = $("#event-list");
+    const genreSelection = $("#exampleFormControlSelect1")
 
     $(document).on("click", "button.delete", deleteEvent);
+    genreSelection.on("change", pop)
+
+    function pop() {
+        const genreStatus = $(this).val();
+        console.log(genreStatus);
+        getEvents(genreStatus);
+    }
 
     function deleteEvent() {
         const currentEvent = $(this);
@@ -15,11 +23,11 @@ $(document).ready(function() {
         $.ajax({
             method: "DELETE",
             url: "/api/event/" + id
-          }).then(function(){
+        }).then(function () {
             location.reload(true);
-          })
+        })
     }
-    eventForm.on("submit", function(event) {
+    eventForm.on("submit", function (event) {
         event.preventDefault();
         location.reload(true);
         // Grab values from form
@@ -33,38 +41,51 @@ $(document).ready(function() {
 
         createEvent(eventData);
     });
-
-    $.get("/api/events", function(events) {
-        events.forEach(event => {
-            eventArea.prepend(renderEvent(event));
-        })
-    });
-
-    function createEvent(data) {
-        // Deconstructed values
-        let { band, place, description, date, genre } = data;
-        //Post data through api route
-        $.post("/api/addevent", {
-            band: band,
-            place: place,
-            description: description,
-            date: date,
-            genre: genre
-        }).then(function(data) {
-            // Redirect to members.html
-            window.location.replace("/members");
-        }).catch(function(err) {
-            // Thow error
-            if (err) throw err;
-        });
+    function getEvents(genre) {
+        if (genre) {
+            eventArea.empty();
+            $.get("/api/events/" + genre, function (events) {
+                events.forEach(event => {
+                    eventArea.prepend(renderEvent(event));
+                    console.log(events)
+                })
+            })
+            } else {
+                $.get("/api/events", function (events) {
+                    events.forEach(event => {
+                        eventArea.prepend(renderEvent(event));
+                    })
+                });
+            }
     }
 
-    function renderEvent(data) {
-        // Deconstructed values
-        let { id, band, place, description, date, genre } = data;
+        getEvents();
 
-        // Render html for event
-        return $( /*html*/ `
+        function createEvent(data) {
+            // Deconstructed values
+            let { band, place, description, date, genre } = data;
+            //Post data through api route
+            $.post("/api/addevent", {
+                band: band,
+                place: place,
+                description: description,
+                date: date,
+                genre: genre
+            }).then(function (data) {
+                // Redirect to members.html
+                window.location.replace("/members");
+            }).catch(function (err) {
+                // Thow error
+                if (err) throw err;
+            });
+        }
+
+        function renderEvent(data) {
+            // Deconstructed values
+            let { id, band, place, description, date, genre } = data;
+
+            // Render html for event
+            return $( /*html*/ `
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">${band}</h5>
@@ -77,7 +98,7 @@ $(document).ready(function() {
             </div>
             <br>
         `);
-    }
+        }
 
-});
+    });
 
