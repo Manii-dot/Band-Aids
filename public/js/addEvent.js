@@ -7,8 +7,21 @@ $(document).ready(function() {
     var inputGenre = $("#category");
     var eventArea = $("#event-list");
 
+    $(document).on("click", "button.delete", deleteEvent);
+
+    function deleteEvent() {
+        const currentEvent = $(this);
+        const id = currentEvent[0].id;
+        $.ajax({
+            method: "DELETE",
+            url: "/api/event/" + id
+          }).then(function(){
+            location.reload(true);
+          })
+    }
     eventForm.on("submit", function(event) {
         event.preventDefault();
+        location.reload(true);
         // Grab values from form
         var eventData = {
             band: inputBand.val().trim(),
@@ -20,7 +33,6 @@ $(document).ready(function() {
 
         createEvent(eventData);
     });
-
 
     $.get("/api/events", function(events) {
         events.forEach(event => {
@@ -47,10 +59,9 @@ $(document).ready(function() {
         });
     }
 
-
     function renderEvent(data) {
         // Deconstructed values
-        let { band, place, description, date, genre } = data;
+        let { id, band, place, description, date, genre } = data;
 
         // Render html for event
         return $( /*html*/ `
@@ -61,10 +72,12 @@ $(document).ready(function() {
                   <p class="card-text">${description}</p>
                   <p class="card-text">Date: ${date}</p>
                   <p class="card-text">Genre: ${genre}</p>
-                  <button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+                  <button type="button" id=${id} class="delete btn btn-danger">Delete</button>
                 </div>
             </div>
             <br>
         `);
     }
+
 });
+

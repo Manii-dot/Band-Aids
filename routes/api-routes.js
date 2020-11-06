@@ -89,6 +89,16 @@ module.exports = function(app) {
     });
   });
 
+  app.delete("/api/event/:id", function(req, res) {
+    db.Event.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function() {
+      res.end();
+    });
+  });
+
   app.get("/api/events/:id", function(req, res) {
     db.Event.findOne({
       where: {
@@ -126,9 +136,11 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
+      
     }).then(function(dbEvent){
       res.json(dbEvent);
     })
+    
   })
 
   // Route for logging user out
