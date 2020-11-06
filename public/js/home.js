@@ -1,3 +1,10 @@
+$(document).ready(function () {
+    $.get("/api/user_data").then(function(data) {
+      $(".member-name").text(data.email);
+    });
+  })
+  
+
 //   // The API object contains methods for each kind of request we'll make
 // var API = {
 //     savePost: function(post) {

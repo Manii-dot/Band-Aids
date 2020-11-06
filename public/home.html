@@ -2,76 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Band-Aid Events</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Band-Aid Events</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addEvent.html">Create Event<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="home.html">All Events<span class="sr-only"></span></a>
-          </li>
-            <li class="nav-item">
-                <a class="nav-link" href="members.html">Members<span class="sr-only"></span></a>
-            </li>
-          </ul>
-        </div>
-    </nav>
-
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <form>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Category</label>
-
-                            <select class="form-control category-select" id="exampleFormControlSelect1">
-                                <option selected>...</option>
-                                <option>Pop</option>
-                                <option>Punk</option>
-                                <option>Jazz</option>
-                                <option>Techno</option>
-                                <option>Country</option>
-                                <option>Rock</option>
-                                <option>Hip-Hop</option>
-                                <option>Other</option>
-
-                            </select>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        </form>
-        <br>
-        <div id="event-list">
-          
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="Band-Aid logo" loading="lazy">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="addEvent.html">Create Event<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">All Events<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members.html">Members<span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><span class="member-name"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      </ul>
     </div>
-    <footer class="footer">Copyright 2020 © Band-Aid</footer>
-    <script src="js/home.js"></script>
-    <script src="js/addEvent.js"></script>
+  </nav>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <form>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Category</label>
+
+              <select class="form-control category-select" id="exampleFormControlSelect1">
+                <option selected>...</option>
+                <option>Pop</option>
+                <option>Punk</option>
+                <option>Jazz</option>
+                <option>Techno</option>
+                <option>Country</option>
+                <option>Rock</option>
+                <option>Hip-Hop</option>
+                <option>Other</option>
+
+              </select>
+            </div>
+          </div>
+      </div>
+    </div>
+    </form>
+    <br>
+    <div id="event-list">
+
+    </div>
+  </div>
+  <footer class="footer">Copyright 2020 © Band-Aid</footer>
+  <script src="js/home.js"></script>
+  <script src="js/addEvent.js"></script>
 </body>
 
 </html>

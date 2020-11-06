@@ -7,6 +7,15 @@ $(document).ready(function () {
     var inputGenre = $("#category");
     var eventArea = $("#event-list");
     const genreSelection = $("#exampleFormControlSelect1")
+    let userId;
+
+    $.get("/api/user_data").then(function(data) {
+        $(".member-name").text(data.email);
+        userId = data.id;
+        console.log(userId);
+      });
+
+
 
     $(document).on("click", "button.delete", deleteEvent);
     genreSelection.on("change", pop)
@@ -36,7 +45,8 @@ $(document).ready(function () {
             place: inputLocation.val().trim(),
             description: inputDescription.val().trim(),
             date: inputDate.val().trim(),
-            genre: inputGenre.val().trim()
+            genre: inputGenre.val().trim(),
+            user_id: userId
         };
 
         createEvent(eventData);
@@ -63,14 +73,15 @@ $(document).ready(function () {
 
         function createEvent(data) {
             // Deconstructed values
-            let { band, place, description, date, genre } = data;
+            let { band, place, description, date, genre, user_id } = data;
             //Post data through api route
             $.post("/api/addevent", {
                 band: band,
                 place: place,
                 description: description,
                 date: date,
-                genre: genre
+                genre: genre,
+                user_id: user_id
             }).then(function (data) {
                 // Redirect to members.html
                 window.location.replace("/members");
