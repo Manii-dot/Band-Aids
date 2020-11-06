@@ -39,3 +39,16 @@ $(document).ready(function () {
   }
 
 })
+
+$(document).on("click", "button.delete", deleteEvent);
+
+function deleteEvent() {
+  const currentEvent = $(this);
+  const id = currentEvent[0].id;
+  $.ajax({
+      method: "DELETE",
+      url: "/api/event/" + id
+  }).then(function () {
+      location.reload(true);
+  })
+}
