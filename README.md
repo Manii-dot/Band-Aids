@@ -7,11 +7,13 @@
 ## User Story
 
 ```
-AS A fan of various music,
+AS A fan of various music genre,
 I WANT to get a quick update of my favorite bands/ group/ artist playing locally,
 So that I reduce the time of making useless searches.
 ```
 ## Description
+
+This application allows for new user to sign-up or login to Band-Aid to share, explore, and discover music events happening around the world. Once the User has signed-up, they will receive an email from the development team welcoming them to the Band-Aid family
 
 ## Tech
 
@@ -26,6 +28,8 @@ This application leverages:
 * MySQL
 * Sequalize
 * Heroku
+* Git-Hub
+* ES Lint
 
 ![Screenshot](Screenshot.png)
 

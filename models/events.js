@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         //Event date
         date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         // State the genre of the band
