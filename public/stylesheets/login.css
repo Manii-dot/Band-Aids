@@ -9,7 +9,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100%;
+  background-attachment: fixed;
+  height: auto;
+  width: 100%;
   margin:0 auto;
   padding: 0px;
 }
@@ -57,22 +59,6 @@ a:hover{
   color: blue;
 }
 
-.profile{
-  margin-top: 2vw;
-  background-color: white;
-  border-radius: 10px;
-  color: #000;
-}
-
-.profile-pic{
-  margin: 0 auto;
-  margin-top: 1vw;
-  border-radius: 10px;
-  padding: 5px;
-  height: 10vw;
-  width: 10vw;
-}
-
 .card-title, .mt-0{
   color: #000;
   border-bottom: 2px solid #353535;
@@ -91,20 +77,6 @@ a:hover{
   margin-right:5px;
 }
 
-#edit-profile{
-  text-align: center;
-  color: white;
-  background-color: #ef233c;
-  border-radius: 10px;
-  margin: 1px;
-}
-
-#edit-profile:hover{
-  background-color: white;
-  opacity: 0.8;
-  color: #000;
-}
-
 .media{
   background-color: white;
   color: #000;
@@ -114,15 +86,6 @@ a:hover{
 
 .card-header{
   background-color: #DCDCDC;
-}
-
-#author{
-  color:#000;
-}
-
-iframe{
-  padding: 5px;
-  margin-right:10px;
 }
 
 footer {
